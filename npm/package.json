@@ -1,0 +1,35 @@
+{
+  "name": "@apiverve/swiftlookup",
+  "version": "1.1.12",
+  "description": "SWIFT Code Lookup is a simple tool for looking up SWIFT code information. It returns information such as the bank, branch, and more based on the SWIFT code provided.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "mocha",
+    "example": "node examples/basic.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/swiftlookup-api.git",
+    "directory": "npm"
+  },
+  "keywords": [
+    "swift code lookup", "swift code lookup api", "swift code lookup tool", "swift code lookup software", "swift code lookup service"
+  ],
+  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/swiftlookup-api/issues"
+  },
+  "homepage": "https://apiverve.com/marketplace/swiftlookup?utm_source=npm",
+  "devDependencies": {
+    "mocha": "^11.0.1",
+    "chai": "^5.1.2",
+    "dotenv": "^16.4.7"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "promise": "^8.3.0",
+    "axios": "1.13.2"
+  }
+}
