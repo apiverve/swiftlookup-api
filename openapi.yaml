@@ -1,0 +1,72 @@
+openapi: 3.0.4
+info:
+  title: SWIFT Code Lookup
+  description: SWIFT Code Lookup is a simple tool for looking up SWIFT code information. It returns information such as the bank, branch, and more based on the SWIFT code provided.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/swiftlookup:
+    get:
+      summary: Lookup SWIFT Code Information
+      description: SWIFT Code Lookup is a simple tool for looking up SWIFT code information. It returns information such as the bank, branch, and more based on the SWIFT code provided.
+      operationId: swiftlookup
+      parameters:
+      - name: swift
+        in: query
+        schema:
+          type: string
+        required: true
+        description: The SWIFT code to lookup information about
+        example: CHASUS33ARP
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  count: 1
+                  banks:
+                  - bank: JPMORGAN CHASE BANK, N.A.
+                    city: NEW YORK,NY
+                    branch: ACCOUNT RECONCILIATION PROCESSING
+                    swift_code: CHASUS33ARP
+                    country: United States
+                    country_code: US
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
