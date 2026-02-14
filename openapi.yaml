@@ -1,32 +1,35 @@
 openapi: 3.0.4
 info:
   title: SWIFT Code Lookup
-  description: SWIFT Code Lookup is a simple tool for looking up SWIFT code information. It returns information such as the bank, branch, and more based on the SWIFT code provided.
+  description: >-
+    SWIFT Code Lookup is a simple tool for looking up SWIFT code information. It
+    returns information such as the bank, branch, and more based on the SWIFT
+    code provided.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/swiftlookup:
     get:
       summary: Lookup SWIFT Code Information
-      description: SWIFT Code Lookup is a simple tool for looking up SWIFT code information. It returns information such as the bank, branch, and more based on the SWIFT code provided.
+      description: Lookup SWIFT code information based on the SWIFT code
       operationId: swiftlookup
       parameters:
-      - name: swift
-        in: query
-        schema:
-          type: string
-        required: true
-        description: The SWIFT code to lookup information about
-        example: CHASUS33ARP
+        - name: swift
+          in: query
+          schema:
+            type: string
+          required: true
+          description: The SWIFT code to lookup information about
+          example: CHASUS33ARP
       responses:
         '200':
           description: Successful Response
@@ -42,26 +45,26 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   count: 1
                   banks:
-                  - bank: JPMORGAN CHASE BANK, N.A.
-                    city: NEW YORK,NY
-                    branch: ACCOUNT RECONCILIATION PROCESSING
-                    swift_code: CHASUS33ARP
-                    country: United States
-                    country_code: US
+                    - bank: JPMORGAN CHASE BANK, N.A.
+                      city: NEW YORK,NY
+                      branch: ACCOUNT RECONCILIATION PROCESSING
+                      swift_code: CHASUS33ARP
+                      country: United States
+                      country_code: US
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -69,4 +72,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
