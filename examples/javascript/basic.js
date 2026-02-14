@@ -13,12 +13,7 @@ const API_URL = 'https://api.apiverve.com/v1/swiftlookup';
  */
 async function callSWIFTCodeLookupAPI() {
   try {
-    // Query parameters
-    const params &#x3D; new URLSearchParams({
-            swift: &#x27;CHASUS33ARP&#x27;
-        });
-
-    const response = await fetch(`${API_URL}?${params}`, {
+    const response = await fetch(API_URL, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
