@@ -12,7 +12,6 @@ namespace APIVerve.API.SWIFTCodeLookup
     {
         /// <summary>
         /// The SWIFT code to lookup information about
-        /// Example: CHASUS33ARP
         /// </summary>
         [JsonProperty("swift")]
         public string Swift { get; set; }
