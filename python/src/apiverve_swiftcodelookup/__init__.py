@@ -1,1 +1,3 @@
-from .apiClient import SwiftlookupAPIClient
+from .apiClient import SwiftlookupAPIClient, SwiftlookupAPIClientError
+
+__all__ = ['SwiftlookupAPIClient', 'SwiftlookupAPIClientError']
