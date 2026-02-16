@@ -226,8 +226,9 @@ from apiverve_swiftcodelookup.apiClient import SwiftlookupAPIClient
 
 api = SwiftlookupAPIClient("[YOUR_API_KEY]")
 
+query = { "swift": "CHASUS33ARP" }
+
 try:
-    query = { "swift": "CHASUS33ARP" }
     result = api.execute(query)
     print(result)
 finally:
