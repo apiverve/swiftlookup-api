@@ -1,12 +1,12 @@
 {
   "name": "@apiverve/swiftlookup",
-  "version": "1.1.14",
+  "version": "1.2.0",
   "description": "SWIFT Code Lookup is a simple tool for looking up SWIFT code information. It returns information such as the bank, branch, and more based on the SWIFT code provided.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=18.0.0"
   },
   "files": [
     "index.js",
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    ""
+    "swift code lookup", "swift code lookup api", "swift code lookup tool", "swift code lookup software", "swift code lookup service"
   ],
   "author": {
     "name": "APIVerve",
@@ -41,8 +41,7 @@
     "dotenv": "^16.4.7"
   },
   "dependencies": {
-    "node-fetch": "^3.3.2",
-    "promise": "^8.3.0",
-    "axios": "1.13.2"
+    "axios": "1.13.2",
+    "form-data": "^4.0.1"
   }
 }
