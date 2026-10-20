@@ -2,9 +2,9 @@ openapi: 3.0.4
 info:
   title: SWIFT Code Lookup
   description: >-
-    SWIFT Code Lookup is a simple tool for looking up SWIFT code information. It
-    returns information such as the bank, branch, and more based on the SWIFT
-    code provided.
+    SWIFT Code Lookup identifies the bank institution, branch, city, and country
+    code behind any SWIFT or BIC code. Search by code or query by bank name to
+    verify matching financial institutions and branch locations.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +19,7 @@ servers:
 paths:
   /v1/swiftlookup:
     get:
-      summary: Lookup SWIFT Code Information
+      summary: SWIFT Code Lookup
       description: Lookup SWIFT code information based on the SWIFT code
       operationId: swiftlookup
       parameters:
