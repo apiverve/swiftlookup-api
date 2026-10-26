@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/swiftlookup",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "SWIFT Code Lookup identifies the bank institution, branch, city, and country code behind any SWIFT or BIC code. Search by code or query by bank name to verify matching financial institutions and branch locations.",
   "main": "index.js",
   "types": "index.d.ts",
