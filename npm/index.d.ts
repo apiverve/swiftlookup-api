@@ -36,6 +36,21 @@ declare module '@apiverve/swiftlookup' {
       swiftCode:   null | string;
       country:     null | string;
       countryCode: null | string;
+      isEu:        boolean | null;
+      isEea:       boolean | null;
+      isSepa:      boolean | null;
+      bicDetails:  BicDetails;
+  }
+  
+  interface BicDetails {
+      bankCode:        null | string;
+      countryCode:     null | string;
+      locationCode:    null | string;
+      branchCode:      null | string;
+      bic8:            null | string;
+      bic11:           null | string;
+      isPrimaryOffice: boolean | null;
+      isTestBic:       boolean | null;
   }
 
   export default class swiftlookupWrapper {
