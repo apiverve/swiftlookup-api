@@ -4,6 +4,6 @@ require_relative "apiverve_swiftlookup/client"
 
 module APIVerve
   module Swiftlookup
-    VERSION = "1.2.3"
+    VERSION = "1.2.4"
   end
 end
