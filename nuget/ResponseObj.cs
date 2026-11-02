@@ -58,6 +58,45 @@ namespace APIVerve.API.SWIFTCodeLookup
 
         [JsonProperty("country_code")]
         public string CountryCode { get; set; }
+
+        [JsonProperty("is_eu")]
+        public bool? IsEu { get; set; }
+
+        [JsonProperty("is_eea")]
+        public bool? IsEea { get; set; }
+
+        [JsonProperty("is_sepa")]
+        public bool? IsSepa { get; set; }
+
+        [JsonProperty("bic_details")]
+        public BicDetails BicDetails { get; set; }
+    }
+
+    public partial class BicDetails
+    {
+        [JsonProperty("bank_code")]
+        public string BankCode { get; set; }
+
+        [JsonProperty("country_code")]
+        public string CountryCode { get; set; }
+
+        [JsonProperty("location_code")]
+        public long? LocationCode { get; set; }
+
+        [JsonProperty("branch_code")]
+        public string BranchCode { get; set; }
+
+        [JsonProperty("bic8")]
+        public string Bic8 { get; set; }
+
+        [JsonProperty("bic11")]
+        public string Bic11 { get; set; }
+
+        [JsonProperty("is_primary_office")]
+        public bool? IsPrimaryOffice { get; set; }
+
+        [JsonProperty("is_test_bic")]
+        public bool? IsTestBic { get; set; }
     }
 
     public partial class Premium
