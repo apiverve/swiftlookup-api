@@ -219,7 +219,20 @@ A real response from the SWIFT Code Lookup API:
         "branch": "ACCOUNT RECONCILIATION PROCESSING",
         "swift_code": "CHASUS33ARP",
         "country": "United States",
-        "country_code": "US"
+        "country_code": "US",
+        "is_eu": false,
+        "is_eea": false,
+        "is_sepa": false,
+        "bic_details": {
+          "bank_code": "CHAS",
+          "country_code": "US",
+          "location_code": "33",
+          "branch_code": "ARP",
+          "bic8": "CHASUS33",
+          "bic11": "CHASUS33ARP",
+          "is_primary_office": false,
+          "is_test_bic": false
+        }
       }
     ]
   }
