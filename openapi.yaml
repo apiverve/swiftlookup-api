@@ -28,7 +28,9 @@ paths:
           schema:
             type: string
           required: true
-          description: The SWIFT code to lookup information about
+          description: >-
+            The SWIFT code to lookup information about. A partial code of at
+            least 4 characters matches every code it prefixes
           example: CHASUS33ARP
       responses:
         '200':
