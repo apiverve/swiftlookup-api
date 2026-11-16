@@ -11,7 +11,7 @@ namespace APIVerve.API.SWIFTCodeLookup
     public class SWIFTCodeLookupQueryOptions
     {
         /// <summary>
-        /// The SWIFT code to lookup information about
+        /// The SWIFT code to lookup information about. A partial code of at least 4 characters matches every code it prefixes
         /// </summary>
         [JsonProperty("swift")]
         public string Swift { get; set; }
